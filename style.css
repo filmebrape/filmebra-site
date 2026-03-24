@@ -1,0 +1,226 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FONTS */
+@font-face { font-family: Neue; src: url('fonts/neue.ttf'); }
+@font-face { font-family: Monument; src: url('fonts/monument.ttf'); }
+@font-face { font-family: Founders; src: url('fonts/founders.otf'); }
+
+body {
+  font-family: Founders;
+  background: #0A0706;
+  color: #F2EBE5;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ONLY background media */
+.hero video,
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* LOGO (isolated now) */
+.hero-logo {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  height: 40px;
+  width: auto;
+  z-index: 10;
+}
+
+/* HERO LOGOS */
+.hero-logos {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.hero-logos img {
+  max-height: 100px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.dark { background: #2C1E1A; }
+.light { background: #F2EBE5; color: #0A0706; }
+.accent { background: #C26E55; }
+
+/* TITLES */
+.title-main {
+  font-family: Neue;
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+.title-impact {
+  font-family: Neue;
+  font-size: 48px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.2;
+}
+
+/* TEXT */
+.text {
+  font-size: 20px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.5;
+}
+
+/* CAROUSEL WRAPPER */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 60px;
+  will-change: transform;
+}
+
+/* IMPORTANT: fixed width behavior */
+.carousel-track img {
+  height: 100px;
+  flex-shrink: 0;
+}
+
+/* FADE EDGES */
+.carousel::before,
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel::before {
+  left: 0;
+  background: linear-gradient(to right, #2C1E1A, transparent);
+}
+
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left, #2C1E1A, transparent);
+}
+
+/* ROW LOGOS */
+.logos-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.logos-row img {
+  max-height: 70px;
+}
+
+/* IMAGE SECTIONS */
+.image-section img {
+  width: 100%;
+  display: block;
+}
+
+/* ORGANIGRAM */
+.organigram {
+  max-width: 100%;
+  height: auto;
+}
+
+/* PARALLAX SECTION */
+.parallax-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* PARALLAX IMAGE WRAPPER */
+.parallax-image {
+  position: absolute;
+  width: 100%;
+  height: 120%; /* bigger than container for movement */
+  top: 0;
+  left: 0;
+}
+
+/* IMAGE */
+.parallax-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(0);
+  transition: transform 0.1s linear;
+}
+
+/* A5 LOGO HOVER EFFECT */
+.logos-row img {
+  max-height: 70px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logos-row img:hover {
+  transform: scale(1.1);
+}
+
+.logos-row img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logos-row img:hover {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
+/* FOOTER */
+.footer {
+  background: #0A0706;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+  font-size: 14px;
+}
+
+/* TRANSITIONS */
+.fade-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
