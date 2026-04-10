@@ -56,15 +56,16 @@
         </div>
     </section>
 
-    <!-- S4: El Reel Principal -->
-    <section id="s4" class="fullscreen">
-    <!-- El overlay solo muestra el texto, pero el clic irá al contenedor -->
+<!-- S4: El Reel Principal -->
+<section id="s4" class="fullscreen">
     <div id="s4-overlay" class="reel-overlay">
         <div class="play-button-container">
             <h2 class="play-text">Dale Play</h2>
+            <span class="play-icon">▶</span>
         </div>
     </div>
-    <video id="reel-video" class="bg-video" playsinline>
+    <!-- Añadimos 'controls' aquí -->
+    <video id="reel-video" class="bg-video" playsinline controls>
         <source src="assets/videos/s4-reel.mp4" type="video/mp4">
     </video>
 </section>
