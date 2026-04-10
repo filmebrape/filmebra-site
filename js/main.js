@@ -1,21 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const reelVideo = document.getElementById('reel-video');
+    const video = document.getElementById('reel-video');
     const overlay = document.getElementById('s4-overlay');
 
-    // Escuchamos el clic directamente sobre el video
-    reelVideo.addEventListener('click', () => {
-        if (reelVideo.paused) {
-            reelVideo.play();
-            overlay.style.opacity = '0';
+    document.getElementById('s4').addEventListener('click', () => {
+        if (video.paused) {
+            // Usamos una promesa para capturar si el navegador bloquea la reproducción
+            video.play().then(() => {
+                overlay.style.opacity = '0';
+            }).catch(error => {
+                console.log("Reproducción bloqueada por el navegador:", error);
+                alert("Por favor, haz clic nuevamente para iniciar el video.");
+            });
         } else {
-            reelVideo.pause();
+            video.pause();
             overlay.style.opacity = '1';
         }
-    });
-
-    // Si el video termina, mostramos el overlay de nuevo
-    reelVideo.addEventListener('ended', () => {
-        overlay.style.opacity = '1';
     });
 });
