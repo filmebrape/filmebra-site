@@ -63,15 +63,52 @@ body {
 }
 
 /* --- S4: EL REEL --- */
-#s4 { background-color: var(--c-black-dark); cursor: pointer; }
-#s4-overlay {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background-color: var(--c-black-dark); display: flex; justify-content: center; align-items: center; z-index: 2;
-    transition: opacity 0.5s ease-in-out;
+#s4 { 
+    background-color: var(--c-black-dark); 
+    cursor: pointer; 
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
 }
-.play-button-container { text-align: center; color: var(--c-cream); }
-.play-text { font-family: 'Neue Haas Grotesk', sans-serif; font-size: 48px; }
-.play-icon { font-size: 30px; display: block; margin-top: 10px; }
+
+#s4-overlay {
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    background-color: var(--c-black-dark); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 2;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /* Esto permite que el clic pase directo al video */
+}
+
+.play-button-container { 
+    text-align: center; 
+    color: var(--c-cream); 
+    transition: transform 0.4s ease; 
+}
+
+/* El texto recupera su fuente y tamaño original */
+.play-text { 
+    font-family: 'Neue Haas Grotesk', sans-serif; 
+    font-size: 48px; 
+    color: var(--c-cream);
+}
+
+.play-icon { 
+    font-size: 30px; 
+    display: block; 
+    margin-top: 10px; 
+}
+
+#reel-video { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    cursor: pointer;
+}
 
 /* --- S5: LLUVIA DE LOGOS TIPO WALLPAPER --- */
 #s5 {
