@@ -209,7 +209,7 @@ body {
         width: 225px !important; /* Original 450px * 0.5 = 225px */
     }
     .s2-text p { 
-        font-size: 20.8px !important; /* Original 26px * 0.8 = 20.8px */
+        font-size: 14px !important; 
     }
 
     /* S5: Reducción título 50% y subtítulo 30% */
