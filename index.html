@@ -9,35 +9,45 @@
 </head>
 <body>
 
+    <!-- S1: Video Loop Animación Logo -->
     <section id="s1" class="fullscreen">
         <video autoplay loop muted playsinline class="bg-video">
             <source src="assets/videos/s1-loop-logo.mp4" type="video/mp4">
         </video>
     </section>
 
+    <!-- S2 y S3: Manifiesto y Cintas Anidadas (Rectángulos redondeados) -->
     <section id="s2-s3">
-        <div class="s2-content reveal">
-            <img src="assets/images/logo-filmebra-largo.svg" alt="Filmebra" class="main-logo-img">
+        <!-- S2 -->
+        <div class="s2-content">
+            <img src="assets/images/logo-filmebra-largo.svg" alt="Filmebra Logo Principal" class="main-logo-img">
             <div class="s2-text">
                 <p>Somos una productora de Cine.</p>
                 <p>Somos una Incubadora de Proyectos Sociales.</p>
                 <p>Somos la estrategia detrás de tu proyecto.</p>
             </div>
         </div>
+
+        <!-- S3: Las Cintas -->
         <div class="s3-cintas-container">
-            <div class="cinta white-cinta reveal">
+            <!-- Cinta Blanca (Base) -->
+            <div class="cinta white-cinta">
                 <div class="cinta-content">
-                    <img src="assets/images/icon-reel.svg" class="spin-icon">
+                    <img src="assets/images/icon-reel.svg" alt="Reel" class="spin-icon">
                     <p>Producimos películas, series y programas a partir de problemáticas sociales investigadas para lograr cambios sociales y de comportamiento en pro de las poblaciones más vulnerables.</p>
                 </div>
-                <div class="cinta orange-cinta reveal">
+                
+                <!-- Cinta Naranja (Vive dentro de la blanca) -->
+                <div class="cinta orange-cinta">
                     <div class="cinta-content">
-                        <img src="assets/images/icon-people.svg" class="static-icon">
+                        <img src="assets/images/icon-people.svg" alt="People" class="static-icon">
                         <p>Creamos proyectos de cooperación publico-privada para iniciar la transformación a través de la comunicación para el cambio de comportamiento, con el objetivo de mejorar la calidad de vida de manera descentralizada.</p>
                     </div>
-                    <div class="cinta brown-cinta reveal">
+
+                    <!-- Cinta Marrón (Vive dentro de la naranja) -->
+                    <div class="cinta brown-cinta">
                         <div class="cinta-content pb-extra">
-                            <img src="assets/images/icon-circles.svg" class="static-icon">
+                            <img src="assets/images/icon-circles.svg" alt="Circles" class="static-icon">
                             <p>Generamos y reinventamos los planes proyectuales de organizaciones comprometidas con la sociedad, a través del mix de metodologías de diseño, implementación y evaluación de proyectos y estrategias de reputación.</p>
                         </div>
                     </div>
@@ -46,39 +56,102 @@
         </div>
     </section>
 
+    <!-- S4: El Reel Principal -->
     <section id="s4" class="fullscreen">
         <div id="s4-overlay" class="reel-overlay">
-            <button id="play-button" class="btn-play">
-                <h2 class="play-text">Dale Play ▶</h2>
-            </button>
+            <div class="play-button-container">
+                <h2 class="play-text">Dale Play</h2>
+                <span class="play-icon">▶</span>
+            </div>
         </div>
         <video id="reel-video" class="bg-video" playsinline>
             <source src="assets/videos/s4-reel.mp4" type="video/mp4">
         </video>
     </section>
 
+    <!-- S5: Alianzas (Lluvia de 13 Logos cortados al borde) -->
     <section id="s5">
         <div class="logos-rain-container">
-            <!-- (Tu código de 13 tracks de logos aquí) -->
+            <div class="rain-track track-1">
+                <img src="assets/images/l1.png"><img src="assets/images/l2.png"><img src="assets/images/l3.png"><img src="assets/images/l4.png"><img src="assets/images/l5.png"><img src="assets/images/l6.png"><img src="assets/images/l7.png">
+                <img src="assets/images/l1.png"><img src="assets/images/l2.png"><img src="assets/images/l3.png"><img src="assets/images/l4.png"><img src="assets/images/l5.png"><img src="assets/images/l6.png"><img src="assets/images/l7.png">
+            </div>
+            <div class="rain-track track-2">
+                <img src="assets/images/l3.png"><img src="assets/images/l5.png"><img src="assets/images/l7.png"><img src="assets/images/l2.png"><img src="assets/images/l4.png"><img src="assets/images/l6.png"><img src="assets/images/l1.png">
+                <img src="assets/images/l3.png"><img src="assets/images/l5.png"><img src="assets/images/l7.png"><img src="assets/images/l2.png"><img src="assets/images/l4.png"><img src="assets/images/l6.png"><img src="assets/images/l1.png">
+            </div>
+            <div class="rain-track track-3">
+                <img src="assets/images/l6.png"><img src="assets/images/l1.png"><img src="assets/images/l5.png"><img src="assets/images/l2.png"><img src="assets/images/l7.png"><img src="assets/images/l3.png"><img src="assets/images/l4.png">
+                <img src="assets/images/l6.png"><img src="assets/images/l1.png"><img src="assets/images/l5.png"><img src="assets/images/l2.png"><img src="assets/images/l7.png"><img src="assets/images/l3.png"><img src="assets/images/l4.png">
+            </div>
+            <div class="rain-track track-4">
+                <img src="assets/images/l7.png"><img src="assets/images/l6.png"><img src="assets/images/l5.png"><img src="assets/images/l4.png"><img src="assets/images/l3.png"><img src="assets/images/l2.png"><img src="assets/images/l1.png">
+                <img src="assets/images/l7.png"><img src="assets/images/l6.png"><img src="assets/images/l5.png"><img src="assets/images/l4.png"><img src="assets/images/l3.png"><img src="assets/images/l2.png"><img src="assets/images/l1.png">
+            </div>
+            <div class="rain-track track-5">
+                <img src="assets/images/l2.png"><img src="assets/images/l4.png"><img src="assets/images/l6.png"><img src="assets/images/l1.png"><img src="assets/images/l3.png"><img src="assets/images/l5.png"><img src="assets/images/l7.png">
+                <img src="assets/images/l2.png"><img src="assets/images/l4.png"><img src="assets/images/l6.png"><img src="assets/images/l1.png"><img src="assets/images/l3.png"><img src="assets/images/l5.png"><img src="assets/images/l7.png">
+            </div>
+            <div class="rain-track track-6">
+                <img src="assets/images/l5.png"><img src="assets/images/l7.png"><img src="assets/images/l2.png"><img src="assets/images/l4.png"><img src="assets/images/l1.png"><img src="assets/images/l6.png"><img src="assets/images/l3.png">
+                <img src="assets/images/l5.png"><img src="assets/images/l7.png"><img src="assets/images/l2.png"><img src="assets/images/l4.png"><img src="assets/images/l1.png"><img src="assets/images/l6.png"><img src="assets/images/l3.png">
+            </div>
+            <div class="rain-track track-7">
+                <img src="assets/images/l1.png"><img src="assets/images/l4.png"><img src="assets/images/l7.png"><img src="assets/images/l3.png"><img src="assets/images/l6.png"><img src="assets/images/l2.png"><img src="assets/images/l5.png">
+                <img src="assets/images/l1.png"><img src="assets/images/l4.png"><img src="assets/images/l7.png"><img src="assets/images/l3.png"><img src="assets/images/l6.png"><img src="assets/images/l2.png"><img src="assets/images/l5.png">
+            </div>
+            <div class="rain-track track-8">
+                <img src="assets/images/l4.png"><img src="assets/images/l1.png"><img src="assets/images/l5.png"><img src="assets/images/l2.png"><img src="assets/images/l6.png"><img src="assets/images/l3.png"><img src="assets/images/l7.png">
+                <img src="assets/images/l4.png"><img src="assets/images/l1.png"><img src="assets/images/l5.png"><img src="assets/images/l2.png"><img src="assets/images/l6.png"><img src="assets/images/l3.png"><img src="assets/images/l7.png">
+            </div>
+            <div class="rain-track track-9">
+                <img src="assets/images/l3.png"><img src="assets/images/l6.png"><img src="assets/images/l2.png"><img src="assets/images/l5.png"><img src="assets/images/l1.png"><img src="assets/images/l4.png"><img src="assets/images/l7.png">
+                <img src="assets/images/l3.png"><img src="assets/images/l6.png"><img src="assets/images/l2.png"><img src="assets/images/l5.png"><img src="assets/images/l1.png"><img src="assets/images/l4.png"><img src="assets/images/l7.png">
+            </div>
+            <div class="rain-track track-10">
+                <img src="assets/images/l7.png"><img src="assets/images/l3.png"><img src="assets/images/l6.png"><img src="assets/images/l1.png"><img src="assets/images/l5.png"><img src="assets/images/l2.png"><img src="assets/images/l4.png">
+                <img src="assets/images/l7.png"><img src="assets/images/l3.png"><img src="assets/images/l6.png"><img src="assets/images/l1.png"><img src="assets/images/l5.png"><img src="assets/images/l2.png"><img src="assets/images/l4.png">
+            </div>
+            <div class="rain-track track-11">
+                <img src="assets/images/l6.png"><img src="assets/images/l2.png"><img src="assets/images/l5.png"><img src="assets/images/l1.png"><img src="assets/images/l4.png"><img src="assets/images/l7.png"><img src="assets/images/l3.png">
+                <img src="assets/images/l6.png"><img src="assets/images/l2.png"><img src="assets/images/l5.png"><img src="assets/images/l1.png"><img src="assets/images/l4.png"><img src="assets/images/l7.png"><img src="assets/images/l3.png">
+            </div>
+            <div class="rain-track track-12">
+                <img src="assets/images/l2.png"><img src="assets/images/l5.png"><img src="assets/images/l1.png"><img src="assets/images/l7.png"><img src="assets/images/l4.png"><img src="assets/images/l3.png"><img src="assets/images/l6.png">
+                <img src="assets/images/l2.png"><img src="assets/images/l5.png"><img src="assets/images/l1.png"><img src="assets/images/l7.png"><img src="assets/images/l4.png"><img src="assets/images/l3.png"><img src="assets/images/l6.png">
+            </div>
+            <div class="rain-track track-13">
+                <img src="assets/images/l5.png"><img src="assets/images/l1.png"><img src="assets/images/l4.png"><img src="assets/images/l2.png"><img src="assets/images/l7.png"><img src="assets/images/l6.png"><img src="assets/images/l3.png">
+                <img src="assets/images/l5.png"><img src="assets/images/l1.png"><img src="assets/images/l4.png"><img src="assets/images/l2.png"><img src="assets/images/l7.png"><img src="assets/images/l6.png"><img src="assets/images/l3.png">
+            </div>
         </div>
-        <div class="s5-title-container reveal">
+        
+        <div class="s5-title-container">
             <h2 class="s5-title">Nuestras alianzas generan<br>crecimiento mutuo e impacto positivo</h2>
             <p class="s5-subtitle">Nuestro equipo multidisciplinario sinergiza sus habilidades para dar soluciones innovadoras y duraderas para nuestros aliados y socios, logrando cumplir siempre nuestros compromisos.</p>
         </div>
     </section>
 
+    <!-- S6: Footer y Video -->
     <section id="s6">
         <div id="s6a">
-            <video autoplay loop muted playsinline class="bg-video"><source src="assets/videos/s6-bts-loop.mp4" type="video/mp4"></video>
-            <h2 class="en-produccion-text reveal">EN PRODUCCIÓN</h2>
+            <video autoplay loop muted playsinline class="bg-video">
+                <source src="assets/videos/s6-bts-loop.mp4" type="video/mp4">
+            </video>
+            <h2 class="en-produccion-text">EN PRODUCCIÓN</h2>
         </div>
         <div id="s6b">
-            <div class="footer-card reveal">
-                <p>FILMEBRA ©2026<br><br>Este sitio fue diseñado e implementado por Filmebra Consulting.<br><br>Si deseas contactarte con nosotrxs, envíanos un correo a: info@filmebra.com<br><br>Recuerda que nosotrxs si recibimos trabajos en proceso para análisis :)</p>
+            <div class="footer-content">
+                <p>FILMEBRA ©2026<br><br>
+                Este sitio fue diseñado e implementado por Filmebra<br>Consulting.<br><br>
+                Si deseas contactarte con nosotrxs, envíanos un<br>
+                correo a: info@filmebra.com<br><br>
+                Recuerda que nosotrxs si recibimos trabajos en<br>proceso para análisis :)</p>
             </div>
-            <img src="assets/images/logo-filmebra-small.svg" alt="Filmebra Logo" class="footer-logo reveal">
+            <img src="assets/images/logo-filmebra-small.svg" alt="Filmebra Logo" class="footer-logo">
         </div>
     </section>
+
     <script src="js/main.js"></script>
 </body>
 </html>
