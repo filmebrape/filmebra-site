@@ -40,7 +40,7 @@ body {
 /* Las cintas anidadas con más margen a los lados (120px menos de ancho = 60px de borde lateral por lado) */
 .white-cinta { background-color: var(--c-cream); color: var(--c-black-dark); width: 100%; }
 .orange-cinta { background-color: var(--c-orange); color: var(--c-cream); width: calc(100% - 120px); }
-.brown-cinta { background-color: var(--c-brown-dark); color: var(--c-peach); width: calc(100% - 120px); }
+.brown-cinta { background-color: var(--c-brown-dark); color: var(--c-orange); width: calc(100% - 120px); }
 
 /* Espaciados y Textos internos de S3 más grandes y bold */
 .cinta-content { padding: 100px 50px 80px 50px; display: flex; flex-direction: column; align-items: center; text-align: center; }
@@ -212,5 +212,12 @@ body {
     }
     .footer-logo { 
         width: 30px !important; /* Original 60px * 0.5 = 30px */
+    }
+}
+
+/* --- AJUSTE: REDUCCIÓN DE LOGO S2 EN ESCRITORIO --- */
+@media (min-width: 769px) {
+    .main-logo-img { 
+        width: 315px !important; /* 450px * 0.7 = 315px */
     }
 }
