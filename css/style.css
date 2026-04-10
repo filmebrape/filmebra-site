@@ -7,167 +7,70 @@
     --c-cream: #F2EBE5;
 }
 
-/* --- IMPORTACIÓN DE FUENTES EXACTAS --- */
+/* --- IMPORTACIÓN DE FUENTES --- */
 @font-face { font-family: 'Founders Grotesk'; src: url('../assets/fonts/FoundersGrotesk-Medium.otf') format('opentype'); font-weight: 500; }
 @font-face { font-family: 'Neue Haas Grotesk'; src: url('../assets/fonts/NeueHaasDisplayMediu.ttf') format('truetype'); font-weight: 500; }
 @font-face { font-family: 'Pitch Sans'; src: url('../assets/fonts/PitchSans-SemiBold.ttf') format('truetype'); font-weight: 600; }
 
-/* --- RESET Y ESTILOS GLOBALES --- */
+/* --- GLOBAL --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-    background-color: var(--c-black-dark); color: var(--c-cream);
-    font-family: 'Founders Grotesk', sans-serif; overflow-x: hidden;
-}
+body { background-color: var(--c-black-dark); color: var(--c-cream); font-family: 'Founders Grotesk', sans-serif; overflow-x: hidden; }
 .fullscreen { height: 100vh; width: 100vw; position: relative; }
 .bg-video { width: 100%; height: 100%; object-fit: cover; }
+.reveal { opacity: 0; transform: translateY(60px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+.reveal.active { opacity: 1; transform: translateY(0); }
 
-/* --- EFECTOS DE ANIMACIÓN --- */
-.reveal {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-}
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* --- S2 y S3: MANIFIESTO Y CINTAS ANIDADAS (RECTÁNGULOS REDONDEADOS) --- */
+/* --- S2 y S3: CINTAS --- */
 #s2-s3 { background-color: var(--c-black-dark); text-align: center; padding-top: 10vh; }
 .s2-content { margin-bottom: 120px; }
-
 .main-logo-img { max-width: 90%; width: 450px; margin-bottom: 50px; display: block; margin-left: auto; margin-right: auto; }
 .s2-text p { font-size: 26px; line-height: 1.8; color: var(--c-peach); font-weight: 600; }
 
-.s3-cintas-container { width: 90%; max-width: 1000px; margin: 0 auto; }
-
-.cinta { border-radius: 120px 120px 0 0; margin: 0 auto; }
+.s3-cintas-container { width: 95%; max-width: 1000px; margin: 0 auto; }
+.cinta { border-radius: 120px 120px 0 0; margin: 0 auto; position: relative; }
 .white-cinta { background-color: var(--c-cream); color: var(--c-black-dark); width: 100%; }
-.orange-cinta { background-color: var(--c-orange); color: var(--c-cream); width: calc(100% - 120px); }
-.brown-cinta { background-color: var(--c-brown-dark); color: var(--c-peach); width: calc(100% - 120px); }
-
+.orange-cinta { background-color: var(--c-orange); color: var(--c-cream); width: calc(100% - 100px); }
+.brown-cinta { background-color: var(--c-brown-dark); color: var(--c-peach); width: calc(100% - 100px); }
 .cinta-content { padding: 100px 50px 80px 50px; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .cinta-content p { font-size: 24px; line-height: 1.5; font-weight: 600; max-width: 700px; }
 .pb-extra { padding-bottom: 180px; }
 
-.spin-icon { width: 80px; margin-bottom: 30px; animation: spin 5s linear infinite; }
-.static-icon { width: 80px; margin-bottom: 30px; }
-
-@keyframes spin { 100% { transform: rotate(360deg); } }
-
 @media (max-width: 768px) {
+    .main-logo-img { width: 280px; }
+    .s2-text p { font-size: 18px; }
     .cinta { border-radius: 60px 60px 0 0; }
-    .s2-text p { font-size: 20px; }
-    .cinta-content p { font-size: 18px; }
-    .orange-cinta, .brown-cinta { width: calc(100% - 40px); }
+    .cinta-content p { font-size: 16px; }
     .cinta-content { padding: 60px 20px 40px 20px; }
+    .orange-cinta, .brown-cinta { width: calc(100% - 40px); }
 }
 
-/* --- S4: EL REEL --- */
-#s4 { background-color: var(--c-black-dark); cursor: pointer; }
-#s4-overlay {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background-color: var(--c-black-dark); display: flex; justify-content: center; align-items: center; z-index: 2;
-    transition: opacity 0.5s ease-in-out;
-}
-.play-button-container { text-align: center; color: var(--c-cream); transition: transform 0.4s ease; }
-
-/* Animación Hover de la S4 */
-#s4:hover .play-button-container { transform: scale(1.1); }
-
+/* --- S4 --- */
+#s4 { background-color: var(--c-black-dark); cursor: pointer; height: auto; aspect-ratio: 16/9; width: 100vw; }
+#s4-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--c-black-dark); display: flex; justify-content: center; align-items: center; z-index: 2; transition: opacity 0.5s ease-in-out; }
 .play-text { font-family: 'Neue Haas Grotesk', sans-serif; font-size: 48px; }
-.play-icon { font-size: 30px; display: block; margin-top: 10px; }
 
-/* --- S5: LLUVIA DE LOGOS TIPO WALLPAPER --- */
-#s5 {
-    height: 100vh; 
-    position: relative; 
-    /* CORREGIDO: Usamos el marrón oscuro de tu paleta en lugar del negro */
-    background-color: var(--c-brown-dark); 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    overflow: hidden;
-}
-
-.logos-rain-container {
-    position: absolute; top: 0; 
-    /* El truco de las 13 columnas cortadas */
-    width: calc(100vw + 100px); left: -50px;
-    height: 100%;
-    display: flex; justify-content: space-between; 
-    /* Aumenté un poco la opacidad a 0.2 para que se noten más los logos como en tu referencia */
-    opacity: 0.2; 
-    /* El difuminado para que no se vea el borde donde nacen/mueren los logos */
-    -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 20%, black 80%, transparent 95%);
-    mask-image: linear-gradient(to bottom, transparent 5%, black 20%, black 80%, transparent 95%);
-}
-
+/* --- S5 --- */
+#s5 { height: 100vh; position: relative; background-color: var(--c-brown-dark); display: flex; justify-content: center; align-items: center; overflow: hidden; }
+.logos-rain-container { position: absolute; top: 0; width: calc(100vw + 100px); left: -50px; height: 100%; display: flex; justify-content: space-between; opacity: 0.2; mask-image: linear-gradient(to bottom, transparent 5%, black 20%, black 80%, transparent 95%); }
 .rain-track { display: flex; flex-direction: column; width: 100px; animation: fall linear infinite; }
 .rain-track img { width: 100%; margin-bottom: 60px; }
-
-.track-1 { animation-duration: 35s; margin-top: -100px; }
-.track-2 { animation-duration: 42s; margin-top: -20px; }
-.track-3 { animation-duration: 28s; margin-top: -150px; }
-.track-4 { animation-duration: 38s; margin-top: -50px; }
-.track-5 { animation-duration: 45s; margin-top: -120px; }
-.track-6 { animation-duration: 32s; margin-top: 0px; }
-.track-7 { animation-duration: 40s; margin-top: -90px; }
-.track-8 { animation-duration: 30s; margin-top: -160px; }
-.track-9 { animation-duration: 36s; margin-top: -40px; }
-.track-10 { animation-duration: 43s; margin-top: -110px; }
-.track-11 { animation-duration: 33s; margin-top: -10px; }
-.track-12 { animation-duration: 39s; margin-top: -140px; }
-.track-13 { animation-duration: 34s; margin-top: -60px; }
-
+.track-1 { animation-duration: 35s; } .track-2 { animation-duration: 42s; } .track-3 { animation-duration: 28s; } .track-4 { animation-duration: 38s; } .track-5 { animation-duration: 45s; } .track-6 { animation-duration: 32s; } .track-7 { animation-duration: 40s; } .track-8 { animation-duration: 30s; } .track-9 { animation-duration: 36s; } .track-10 { animation-duration: 43s; } .track-11 { animation-duration: 33s; } .track-12 { animation-duration: 39s; } .track-13 { animation-duration: 34s; }
 @keyframes fall { 0% { transform: translateY(-50%); } 100% { transform: translateY(0%); } }
-
-.s5-title-container { position: relative; z-index: 10; text-align: center; width: 80%; max-width: 900px; margin-top: 20vh; }
+.s5-title-container { position: relative; z-index: 10; text-align: center; width: 90%; max-width: 900px; }
 .s5-title { font-family: 'Founders Grotesk', sans-serif; font-size: 48px; color: var(--c-peach); margin-bottom: 20px; }
 .s5-subtitle { font-family: 'Founders Grotesk', sans-serif; font-size: 20px; color: var(--c-cream); font-weight: 500; line-height: 1.5; }
 
-@media (max-width: 768px) {
-    .logos-rain-container { width: calc(100vw + 60px); left: -30px; }
-    .rain-track { width: 60px; }
-}
+/* --- S6: FOOTER (La cinta al infinito) --- */
+#s6a { height: auto; aspect-ratio: 16/9; position: relative; width: 100vw; }
+.en-produccion-text { position: absolute; right: 10%; top: 50%; transform: translateY(-50%); font-family: 'Neue Haas Grotesk', sans-serif; font-size: 24px; color: var(--c-cream); letter-spacing: 2px; }
 
-/* --- S6: FOOTER --- */
-#s6a { height: 618px; position: relative; }
-.en-produccion-text {
-    position: absolute; right: 10%; top: 50%; transform: translateY(-50%);
-    font-family: 'Neue Haas Grotesk', sans-serif; font-size: 24px; color: var(--c-cream); letter-spacing: 2px;
+#s6b { 
+    background-color: var(--c-black-dark); /* Fondo de la sección */
+    padding-top: 100px;
 }
-
-#s6b {
-    background-color: var(--c-black-dark); 
-    padding: 80px 50px;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: flex-end; /* Alinea logo y caja abajo */
-    min-height: 400px;
+/* La cinta naranja que baja y se pierde abajo */
+#s6b .orange-cinta { 
+    padding-bottom: 100px; 
+    min-height: 400px; /* Esto hace que baje */
 }
-
-/* Esta es la "Cinta" flotante con esquinas redondeadas */
-.footer-text-card {
-    background-color: var(--c-orange);
-    padding: 60px;
-    border-radius: 40px; 
-    max-width: 600px;
-    width: 100%;
-}
-
-.footer-text-card p {
-    font-family: 'Pitch Sans', sans-serif; 
-    font-size: 14px; 
-    color: var(--c-cream); 
-    line-height: 2; 
-}
-
-.footer-logo { width: 60px; }
-
-@media (max-width: 768px) {
-    #s6b { flex-direction: column; align-items: flex-start; padding: 40px 30px; }
-    .footer-text-card { padding: 30px; border-radius: 20px; margin-bottom: 40px; }
-    .en-produccion-text { right: 5%; font-size: 18px; }
-}
+.footer-logo { width: 60px; margin-top: 40px; }
