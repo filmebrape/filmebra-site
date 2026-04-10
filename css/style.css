@@ -119,7 +119,7 @@ body {
     .rain-track { width: 60px; }
 }
 
-/* --- S6: FOOTER (Sin final redondeado, extendido al infinito) --- */
+/* --- S6: FOOTER --- */
 #s6a { height: 618px; position: relative; }
 .en-produccion-text {
     position: absolute; right: 10%; top: 50%; transform: translateY(-50%);
@@ -127,35 +127,34 @@ body {
 }
 
 #s6b {
-    background-color: var(--c-orange); /* Fondo de la cinta naranja */
+    background-color: var(--c-black-dark); 
     padding: 80px 50px;
-    display: flex; justify-content: space-between; align-items: flex-end;
-    /* Quitamos el redondeado abajo, lo dejamos solo arriba */
-    border-radius: 40px 40px 0 0;
-    /* Añadimos un pseudo-elemento que rellene el resto de la pantalla hacia abajo */
-    position: relative;
-    z-index: 1;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-end; /* Alinea logo y caja abajo */
+    min-height: 400px;
 }
 
-/* Este truco extiende el fondo del footer hacia el infinito de la pantalla */
-#s6b::after {
-    content: "";
-    position: absolute;
-    top: 100%; left: 0;
-    width: 100%; height: 200vh; /* Se extiende 2 veces la altura de la pantalla */
+/* Esta es la "Cinta" flotante con esquinas redondeadas */
+.footer-text-card {
     background-color: var(--c-orange);
-    z-index: -1;
+    padding: 60px;
+    border-radius: 40px; 
+    max-width: 600px;
+    width: 100%;
 }
 
 .footer-text-card p {
-    font-family: 'Pitch Sans', sans-serif; font-size: 14px; 
-    color: var(--c-cream); line-height: 2; 
+    font-family: 'Pitch Sans', sans-serif; 
+    font-size: 14px; 
+    color: var(--c-cream); 
+    line-height: 2; 
 }
 
-.footer-logo { width: 60px; margin-bottom: 20px; }
+.footer-logo { width: 60px; }
 
 @media (max-width: 768px) {
-    #s6b { flex-direction: column-reverse; align-items: flex-start; padding: 40px 30px; }
-    .footer-logo { margin-bottom: 40px; margin-top: 20px; }
+    #s6b { flex-direction: column; align-items: flex-start; padding: 40px 30px; }
+    .footer-text-card { padding: 30px; border-radius: 20px; margin-bottom: 40px; }
     .en-produccion-text { right: 5%; font-size: 18px; }
 }
