@@ -1,25 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- LÓGICA DE S4: EL REEL ---
-    const s4Section = document.getElementById('s4');
-    const overlay = document.getElementById('s4-overlay');
     const reelVideo = document.getElementById('reel-video');
+    const overlay = document.getElementById('s4-overlay');
 
-    s4Section.addEventListener('click', () => {
+    // Escuchamos el clic directamente sobre el video
+    reelVideo.addEventListener('click', () => {
         if (reelVideo.paused) {
+            reelVideo.play();
             overlay.style.opacity = '0';
-            setTimeout(() => {
-                overlay.style.pointerEvents = 'none';
-                reelVideo.play();
-            }, 500); 
         } else {
             reelVideo.pause();
+            overlay.style.opacity = '1';
         }
     });
 
+    // Si el video termina, mostramos el overlay de nuevo
     reelVideo.addEventListener('ended', () => {
-        overlay.style.pointerEvents = 'auto'; 
         overlay.style.opacity = '1';
     });
-
 });
