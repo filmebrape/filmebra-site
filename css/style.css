@@ -176,7 +176,7 @@ body {
 
 @media (max-width: 768px) {
     /* Eliminamos el height: 100vh para que la sección no sea forzada a pantalla completa */
-    #s1, #s4, #s6a {
+    #s4, #s6a {
         height: auto !important; 
     }
 
