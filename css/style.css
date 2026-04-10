@@ -201,3 +201,30 @@ body {
         position: relative !important;  /* Sale del flujo de "fondo" para empujar el contenido */
     }
 }
+
+/* --- AJUSTES DE ESCALA PARA MÓVILES (S2, S3, S5, S6B) --- */
+@media (max-width: 768px) {
+    /* S2: Reducción logo 50% y texto 20% */
+    .main-logo-img { 
+        width: 225px !important; /* Original 450px * 0.5 = 225px */
+    }
+    .s2-text p { 
+        font-size: 20.8px !important; /* Original 26px * 0.8 = 20.8px */
+    }
+
+    /* S5: Reducción título 50% y subtítulo 30% */
+    .s5-title { 
+        font-size: 24px !important; /* Original 48px * 0.5 = 24px */
+    }
+    .s5-subtitle { 
+        font-size: 14px !important; /* Original 20px * 0.7 = 14px */
+    }
+
+    /* S6B: Reducción texto 30% y logo 50% */
+    .footer-content p { 
+        font-size: 9.8px !important; /* Original 14px * 0.7 = 9.8px */
+    }
+    .footer-logo { 
+        width: 30px !important; /* Original 60px * 0.5 = 30px */
+    }
+}
