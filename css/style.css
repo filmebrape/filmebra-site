@@ -1,4 +1,4 @@
-/* --- VARIABLES DE COLOR --- */
+/* --- VARIABLES --- */
 :root {
     --c-orange: #C26E55;
     --c-peach: #E8AF9C;
@@ -7,70 +7,63 @@
     --c-cream: #F2EBE5;
 }
 
-/* --- IMPORTACIÓN DE FUENTES --- */
-@font-face { font-family: 'Founders Grotesk'; src: url('../assets/fonts/FoundersGrotesk-Medium.otf') format('opentype'); font-weight: 500; }
-@font-face { font-family: 'Neue Haas Grotesk'; src: url('../assets/fonts/NeueHaasDisplayMediu.ttf') format('truetype'); font-weight: 500; }
-@font-face { font-family: 'Pitch Sans'; src: url('../assets/fonts/PitchSans-SemiBold.ttf') format('truetype'); font-weight: 600; }
-
-/* --- GLOBAL --- */
+/* --- RESET Y GLOBALES --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background-color: var(--c-black-dark); color: var(--c-cream); font-family: 'Founders Grotesk', sans-serif; overflow-x: hidden; }
 .fullscreen { height: 100vh; width: 100vw; position: relative; }
 .bg-video { width: 100%; height: 100%; object-fit: cover; }
-.reveal { opacity: 0; transform: translateY(60px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+.reveal { opacity: 0; transform: translateY(60px); transition: all 0.8s ease; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
-/* --- S2 y S3: CINTAS --- */
+/* --- SECCIÓN 2 Y 3 (SÓLO LAS CINTAS DEL MANIFIESTO) --- */
 #s2-s3 { background-color: var(--c-black-dark); text-align: center; padding-top: 10vh; }
 .s2-content { margin-bottom: 120px; }
-.main-logo-img { max-width: 90%; width: 450px; margin-bottom: 50px; display: block; margin-left: auto; margin-right: auto; }
+.main-logo-img { width: 450px; margin-bottom: 50px; display: block; margin-left: auto; margin-right: auto; }
 .s2-text p { font-size: 26px; line-height: 1.8; color: var(--c-peach); font-weight: 600; }
 
-.s3-cintas-container { width: 95%; max-width: 1000px; margin: 0 auto; }
-.cinta { border-radius: 120px 120px 0 0; margin: 0 auto; position: relative; }
-.white-cinta { background-color: var(--c-cream); color: var(--c-black-dark); width: 100%; }
-.orange-cinta { background-color: var(--c-orange); color: var(--c-cream); width: calc(100% - 100px); }
-.brown-cinta { background-color: var(--c-brown-dark); color: var(--c-peach); width: calc(100% - 100px); }
-.cinta-content { padding: 100px 50px 80px 50px; display: flex; flex-direction: column; align-items: center; text-align: center; }
-.cinta-content p { font-size: 24px; line-height: 1.5; font-weight: 600; max-width: 700px; }
-.pb-extra { padding-bottom: 180px; }
+.s3-cintas-container { width: 1000px; margin: 0 auto; }
+.cinta-manifiesto { border-radius: 120px 120px 0 0; margin: 0 auto; width: 100%; }
+.white-cinta { background-color: var(--c-cream); color: var(--c-black-dark); }
+.orange-cinta { background-color: var(--c-orange); color: var(--c-cream); width: 900px; }
+.brown-cinta { background-color: var(--c-brown-dark); color: var(--c-peach); width: 900px; }
+.cinta-content { padding: 100px 50px 80px 50px; display: flex; flex-direction: column; align-items: center; }
+.cinta-content p { font-size: 24px; line-height: 1.5; font-weight: 600; max-width: 700px; text-align: center; }
 
-@media (max-width: 768px) {
-    .main-logo-img { width: 280px; }
-    .s2-text p { font-size: 18px; }
-    .cinta { border-radius: 60px 60px 0 0; }
-    .cinta-content p { font-size: 16px; }
-    .cinta-content { padding: 60px 20px 40px 20px; }
-    .orange-cinta, .brown-cinta { width: calc(100% - 40px); }
-}
+/* --- SECCIÓN 4 --- */
+#s4 { background-color: var(--c-black-dark); cursor: pointer; height: 100vh; width: 100vw; }
+#s4-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--c-black-dark); display: flex; justify-content: center; align-items: center; z-index: 2; transition: opacity 0.5s; }
 
-/* --- S4 --- */
-#s4 { background-color: var(--c-black-dark); cursor: pointer; height: auto; aspect-ratio: 16/9; width: 100vw; }
-#s4-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--c-black-dark); display: flex; justify-content: center; align-items: center; z-index: 2; transition: opacity 0.5s ease-in-out; }
-.play-text { font-family: 'Neue Haas Grotesk', sans-serif; font-size: 48px; }
-
-/* --- S5 --- */
-#s5 { height: 100vh; position: relative; background-color: var(--c-brown-dark); display: flex; justify-content: center; align-items: center; overflow: hidden; }
-.logos-rain-container { position: absolute; top: 0; width: calc(100vw + 100px); left: -50px; height: 100%; display: flex; justify-content: space-between; opacity: 0.2; mask-image: linear-gradient(to bottom, transparent 5%, black 20%, black 80%, transparent 95%); }
-.rain-track { display: flex; flex-direction: column; width: 100px; animation: fall linear infinite; }
-.rain-track img { width: 100%; margin-bottom: 60px; }
-.track-1 { animation-duration: 35s; } .track-2 { animation-duration: 42s; } .track-3 { animation-duration: 28s; } .track-4 { animation-duration: 38s; } .track-5 { animation-duration: 45s; } .track-6 { animation-duration: 32s; } .track-7 { animation-duration: 40s; } .track-8 { animation-duration: 30s; } .track-9 { animation-duration: 36s; } .track-10 { animation-duration: 43s; } .track-11 { animation-duration: 33s; } .track-12 { animation-duration: 39s; } .track-13 { animation-duration: 34s; }
+/* --- SECCIÓN 5 --- */
+#s5 { height: 100vh; background-color: var(--c-brown-dark); display: flex; justify-content: center; align-items: center; overflow: hidden; position: relative; }
+.logos-rain-container { position: absolute; width: 100vw; height: 100%; display: flex; justify-content: space-evenly; opacity: 0.2; }
+.rain-track { width: 80px; animation: fall linear infinite; }
+.rain-track img { width: 100%; margin-bottom: 40px; }
 @keyframes fall { 0% { transform: translateY(-50%); } 100% { transform: translateY(0%); } }
-.s5-title-container { position: relative; z-index: 10; text-align: center; width: 90%; max-width: 900px; }
-.s5-title { font-family: 'Founders Grotesk', sans-serif; font-size: 48px; color: var(--c-peach); margin-bottom: 20px; }
-.s5-subtitle { font-family: 'Founders Grotesk', sans-serif; font-size: 20px; color: var(--c-cream); font-weight: 500; line-height: 1.5; }
+.s5-title-container { text-align: center; width: 80%; z-index: 10; }
 
-/* --- S6: FOOTER (La cinta al infinito) --- */
-#s6a { height: auto; aspect-ratio: 16/9; position: relative; width: 100vw; }
-.en-produccion-text { position: absolute; right: 10%; top: 50%; transform: translateY(-50%); font-family: 'Neue Haas Grotesk', sans-serif; font-size: 24px; color: var(--c-cream); letter-spacing: 2px; }
+/* --- SECCIÓN 6 (FOOTER ESPECIAL) --- */
+#s6a { height: 618px; width: 100vw; position: relative; }
+.en-produccion-text { position: absolute; right: 10%; top: 50%; font-size: 24px; color: var(--c-cream); }
 
-#s6b { 
-    background-color: var(--c-black-dark); /* Fondo de la sección */
-    padding-top: 100px;
+#s6b { background-color: var(--c-black-dark); padding: 50px; }
+.footer-cinta-estilo { 
+    background-color: var(--c-orange); 
+    border-radius: 40px 40px 0 0; 
+    padding: 60px; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    min-height: 400px;
 }
-/* La cinta naranja que baja y se pierde abajo */
-#s6b .orange-cinta { 
-    padding-bottom: 100px; 
-    min-height: 400px; /* Esto hace que baje */
-}
+.footer-text { color: var(--c-cream); font-size: 14px; line-height: 2; font-family: 'Pitch Sans'; }
 .footer-logo { width: 60px; margin-top: 40px; }
+
+/* --- BLOQUE MÓVIL (SOLO SE ACTIVA EN PANTALLAS PEQUEÑAS) --- */
+@media (max-width: 768px) {
+    .main-logo-img { width: 80%; }
+    .s2-text p { font-size: 18px; }
+    .s3-cintas-container { width: 100%; }
+    .orange-cinta, .brown-cinta { width: 90%; }
+    .footer-cinta-estilo { width: 100%; padding: 30px; }
+    #s4 { height: auto; aspect-ratio: 16/9; }
+    #s6a { height: auto; aspect-ratio: 16/9; }
+}
