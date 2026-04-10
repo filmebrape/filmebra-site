@@ -187,3 +187,17 @@ body {
 #reel-video::-webkit-media-controls {
     display: none !important;
 }
+
+@media (max-width: 768px) {
+    /* Eliminamos el height: 100vh para que la sección no sea forzada a pantalla completa */
+    #s1, #s4, #s6a {
+        height: auto !important; 
+    }
+
+    .bg-video {
+        width: 100% !important;
+        height: auto !important; /* El alto se ajusta al contenido para no recortar */
+        object-fit: contain !important; /* Mantiene la proporción del video horizontal */
+        position: relative !important;  /* Sale del flujo de "fondo" para empujar el contenido */
+    }
+}
