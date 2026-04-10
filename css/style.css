@@ -78,15 +78,28 @@ body {
 .play-text { font-family: 'Neue Haas Grotesk', sans-serif; font-size: 48px; }
 .play-icon { font-size: 30px; display: block; margin-top: 10px; }
 
-/* --- S5: LLUVIA DE LOGOS --- */
+/* --- S5: LLUVIA DE LOGOS TIPO WALLPAPER --- */
 #s5 {
-    height: 100vh; position: relative; background-color: var(--c-black-dark);
-    display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden;
+    height: 100vh; 
+    position: relative; 
+    /* CORREGIDO: Usamos el marrón oscuro de tu paleta en lugar del negro */
+    background-color: var(--c-brown-dark); 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden;
 }
 
 .logos-rain-container {
-    position: absolute; top: 0; width: calc(100vw + 100px); left: -50px; height: 100%;
-    display: flex; justify-content: space-between; opacity: 0.15; 
+    position: absolute; top: 0; 
+    /* El truco de las 13 columnas cortadas */
+    width: calc(100vw + 100px); left: -50px;
+    height: 100%;
+    display: flex; justify-content: space-between; 
+    /* Aumenté un poco la opacidad a 0.2 para que se noten más los logos como en tu referencia */
+    opacity: 0.2; 
+    /* El difuminado para que no se vea el borde donde nacen/mueren los logos */
     -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 20%, black 80%, transparent 95%);
     mask-image: linear-gradient(to bottom, transparent 5%, black 20%, black 80%, transparent 95%);
 }
