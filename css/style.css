@@ -183,3 +183,7 @@ body {
     .footer-logo { margin-bottom: 40px; margin-top: 20px; }
     .en-produccion-text { right: 5%; font-size: 18px; }
 }
+/* Ocultar barra de controles nativa pero mantener la funcionalidad */
+#reel-video::-webkit-media-controls {
+    display: none !important;
+}
