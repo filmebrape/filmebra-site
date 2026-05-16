@@ -54,16 +54,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 30px;
       padding: 80px 60px;
       max-width: 900px;
       margin: 0 auto;
-      text-decoration: none;
-      cursor: pointer;
     }
 
-    .documento-texto {
-      flex: 1;
+    .documento-link {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      text-decoration: none;
     }
 
     .documento-texto h2 {
@@ -93,7 +93,7 @@
       transition: opacity 0.2s;
     }
 
-    .documento:hover .descarga {
+    .documento-link:hover .descarga {
       opacity: 0.7;
     }
 
@@ -101,6 +101,11 @@
       width: 200px;
       flex-shrink: 0;
       box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      transition: opacity 0.2s;
+    }
+
+    .documento-link:hover .portada {
+      opacity: 0.85;
     }
 
     .video-section {
@@ -143,10 +148,12 @@
 
     @media (max-width: 600px) {
       .documento {
-        flex-direction: column;
         padding: 60px 30px;
-        gap: 30px;
+      }
+      .documento-link {
+        flex-direction: column;
         text-align: center;
+        gap: 30px;
       }
       .portada {
         width: 160px;
@@ -170,14 +177,16 @@
     <img src="logonorte.png" alt="Proyecto Norte" class="logo">
   </div>
 
-  <a href="resumen-ejecutivo.pdf" target="_blank" class="documento">
-    <div class="documento-texto">
-      <h2>RESUMEN EJECUTIVO</h2>
-      <h3>Estrategia de Comunicaciones</h3>
-      <span class="descarga">Ver documento</span>
-    </div>
-    <img src="portadaresumen.jpg" alt="Portada Resumen Ejecutivo" class="portada">
-  </a>
+  <div class="documento">
+    <a href="resumen-ejecutivo.pdf" target="_blank" class="documento-link">
+      <div class="documento-texto">
+        <h2>RESUMEN EJECUTIVO</h2>
+        <h3>Estrategia de Comunicaciones</h3>
+        <span class="descarga">Ver documento</span>
+      </div>
+      <img src="portadaresumen.jpg" alt="Portada Resumen Ejecutivo" class="portada">
+    </a>
+  </div>
 
   <div class="video-section">
     <h3>Spot nueva ruta turística</h3>
