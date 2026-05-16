@@ -29,7 +29,6 @@
       overflow-x: hidden;
     }
 
-    /* HEADER */
     .header {
       position: relative;
       padding: 48px 0 0 0;
@@ -51,15 +50,16 @@
       z-index: 1;
     }
 
-    /* DOCUMENTO SECTION */
     .documento {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 60px;
+      gap: 30px;
       padding: 80px 60px;
       max-width: 900px;
       margin: 0 auto;
+      text-decoration: none;
+      cursor: pointer;
     }
 
     .documento-texto {
@@ -90,11 +90,10 @@
       color: #ffffff;
       text-decoration: underline;
       text-underline-offset: 3px;
-      cursor: pointer;
       transition: opacity 0.2s;
     }
 
-    .descarga:hover {
+    .documento:hover .descarga {
       opacity: 0.7;
     }
 
@@ -104,7 +103,6 @@
       box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     }
 
-    /* VIDEO SECTION */
     .video-section {
       padding: 0 60px 40px 60px;
       max-width: 900px;
@@ -133,7 +131,6 @@
       display: block;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 48px 20px;
@@ -144,7 +141,6 @@
       line-height: 1.8;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 600px) {
       .documento {
         flex-direction: column;
@@ -174,14 +170,14 @@
     <img src="logonorte.png" alt="Proyecto Norte" class="logo">
   </div>
 
-  <div class="documento">
+  <a href="resumen-ejecutivo.pdf" target="_blank" class="documento">
     <div class="documento-texto">
       <h2>RESUMEN EJECUTIVO</h2>
       <h3>Estrategia de Comunicaciones</h3>
-      <a href="resumen-ejecutivo.pdf" download class="descarga">Descarga aquí</a>
+      <span class="descarga">Ver documento</span>
     </div>
     <img src="portadaresumen.jpg" alt="Portada Resumen Ejecutivo" class="portada">
-  </div>
+  </a>
 
   <div class="video-section">
     <h3>Spot nueva ruta turística</h3>
