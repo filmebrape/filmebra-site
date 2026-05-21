@@ -28,7 +28,6 @@
       color: #ffffff;
     }
 
-    /* TOP NAV */
     .nav {
       padding: 40px 48px;
       text-align: right;
@@ -47,7 +46,6 @@
       opacity: 0.7;
     }
 
-    /* INTRO TEXT */
     .intro {
       padding: 60px 48px 60px 60px;
       max-width: 650px;
@@ -66,7 +64,6 @@
       margin-bottom: 0;
     }
 
-    /* SECTION */
     .section {
       position: relative;
       width: 100%;
@@ -79,38 +76,6 @@
       object-fit: cover;
     }
 
-    .section-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding: 40px 48px;
-    }
-
-    .section-title {
-      position: absolute;
-      bottom: 40px;
-      left: 48px;
-      font-family: 'NeueHaas', sans-serif;
-      font-weight: 400;
-      font-size: clamp(32px, 5vw, 68px);
-      color: #ffffff;
-      line-height: 1;
-    }
-
-    .section-desc {
-      position: absolute;
-      bottom: 40px;
-      left: 48px;
-      max-width: 420px;
-      padding-left: 0;
-    }
-
-    /* LAYOUT: title left, desc left below title, credits right */
     .section-inner {
       position: absolute;
       top: 0;
@@ -161,7 +126,6 @@
       line-height: 1.25;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 60px 48px;
@@ -172,45 +136,49 @@
       line-height: 1.5;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       .nav {
         padding: 32px 24px;
         text-align: center;
       }
       .intro {
-        padding: 0 24px 40px 24px;
+        padding: 24px 24px 40px 24px;
       }
       .section-inner {
-        padding: 24px;
+        padding: 16px 24px;
       }
       .section-bottom {
         flex-direction: column;
-        gap: 16px;
+        gap: 12px;
         align-items: flex-start;
+      }
+      .section-left h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .section-left p {
+        font-size: 9px;
+        line-height: 1.4;
       }
       .section-right {
         text-align: left;
-      }
-      .section-left h2 {
-        font-size: clamp(24px, 6vw, 40px);
+        font-size: 9px;
+        line-height: 1.4;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav class="nav">
     <a href="../" class="home-link">HOME</a>
   </nav>
 
-  <!-- INTRO -->
   <div class="intro">
     <p>We have produced more than 50 audiovisual pieces and our work has been projected in more than 10 countries in the America and Europe, and selected in different film festivals.</p>
     <p>More than 10 key allies and partnerships including UN agencies and Government bodies during our history has been the result of our ethics and blueprint-methodologies which put the people first.</p>
   </div>
 
-  <!-- DOCUMENTARIES -->
   <div class="section">
     <video autoplay muted loop playsinline>
       <source src="../videos/work-documentaries.mp4" type="video/mp4">
@@ -233,7 +201,6 @@
     </div>
   </div>
 
-  <!-- SERIES -->
   <div class="section">
     <video autoplay muted loop playsinline>
       <source src="../videos/work-series.mp4" type="video/mp4">
@@ -256,7 +223,6 @@
     </div>
   </div>
 
-  <!-- SHORTFILMS -->
   <div class="section">
     <video autoplay muted loop playsinline>
       <source src="../videos/work-shortfilms.mp4" type="video/mp4">
@@ -279,7 +245,6 @@
     </div>
   </div>
 
-  <!-- FICTION -->
   <div class="section">
     <video autoplay muted loop playsinline>
       <source src="../videos/work-fiction.mp4" type="video/mp4">
@@ -302,7 +267,6 @@
     </div>
   </div>
 
-  <!-- SOCIAL PROJECTS -->
   <div class="section">
     <video autoplay muted loop playsinline>
       <source src="../videos/work-social.mp4" type="video/mp4">
@@ -325,7 +289,6 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     If you want to reach out, please do so here: info@filmebra.com and be sure to have a concise subject.<br>
     We do not accept unsolicited work.<br>
