@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filmebra — Work</title>
+  <style>
+    @font-face {
+      font-family: 'NeueHaas';
+      src: url('../fonts/NeueHaasDisplayBold.ttf') format('truetype');
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: 'PTSerif';
+      src: url('../fonts/PTSerif-Regular.ttf') format('truetype');
+      font-weight: 400;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      background: #0A0706;
+      color: #ffffff;
+    }
+
+    /* TOP NAV */
+    .nav {
+      padding: 40px 48px;
+      text-align: right;
+    }
+
+    .home-link {
+      font-family: 'NeueHaas', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 0.0em;
+    }
+
+    .home-link:hover {
+      opacity: 0.7;
+    }
+
+    /* INTRO TEXT */
+    .intro {
+      padding: 60px 48px 60px 60px;
+      max-width: 650px;
+    }
+
+    .intro p {
+      font-family: 'PTSerif', serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 21px;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* SECTION */
+    .section {
+      position: relative;
+      width: 100%;
+    }
+
+    .section video {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1920 / 804;
+      object-fit: cover;
+    }
+
+    .section-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 40px 48px;
+    }
+
+    .section-title {
+      position: absolute;
+      bottom: 40px;
+      left: 48px;
+      font-family: 'NeueHaas', sans-serif;
+      font-weight: 400;
+      font-size: clamp(32px, 5vw, 68px);
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .section-desc {
+      position: absolute;
+      bottom: 40px;
+      left: 48px;
+      max-width: 420px;
+      padding-left: 0;
+    }
+
+    /* LAYOUT: title left, desc left below title, credits right */
+    .section-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px 48px;
+    }
+
+    .section-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+    }
+
+    .section-left {
+      max-width: 480px;
+    }
+
+    .section-left h2 {
+      font-family: 'NeueHaas', sans-serif;
+      font-weight: 400;
+      font-size: clamp(32px, 4.5vw, 68px);
+      color: #ffffff;
+      line-height: 1;
+      margin-bottom: 21px;
+    }
+
+    .section-left p {
+      font-family: 'PTSerif', serif;
+      font-weight: 400;
+      font-size: 12px;
+      color: #ffffff;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .section-right {
+      text-align: right;
+      font-family: 'PTSerif', serif;
+      font-weight: 400;
+      font-size: 11px;
+      color: #ffffff;
+      line-height: 1.25;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 60px 48px;
+      font-family: 'PTSerif', serif;
+      font-weight: 400;
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        padding: 32px 24px;
+        text-align: center;
+      }
+      .intro {
+        padding: 0 24px 40px 24px;
+      }
+      .section-inner {
+        padding: 24px;
+      }
+      .section-bottom {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .section-right {
+        text-align: left;
+      }
+      .section-left h2 {
+        font-size: clamp(24px, 6vw, 40px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="../" class="home-link">HOME</a>
+  </nav>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <p>We have produced more than 50 audiovisual pieces and our work has been projected in more than 10 countries in the America and Europe, and selected in different film festivals.</p>
+    <p>More than 10 key allies and partnerships including UN agencies and Government bodies during our history has been the result of our ethics and blueprint-methodologies which put the people first.</p>
+  </div>
+
+  <!-- DOCUMENTARIES -->
+  <div class="section">
+    <video autoplay muted loop playsinline>
+      <source src="../videos/work-documentaries.mp4" type="video/mp4">
+    </video>
+    <div class="section-inner">
+      <div class="section-bottom">
+        <div class="section-left">
+          <h2>Documentaries</h2>
+          <p>We mix project implementation methodologies for analysis and research before drafting the approach of every documentary we make.</p>
+          <p>Inclusion, respect, and safe spaces are our main focuses in all stages.</p>
+          <p>… is the Filmebra way.</p>
+        </div>
+        <div class="section-right">
+          Al Otro Lado de las Telecabinas (2017)<br>
+          Dir. Felix Bravo<br>
+          Luya, Amazonas - Peru<br><br>
+          ©Filmebra 2017
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERIES -->
+  <div class="section">
+    <video autoplay muted loop playsinline>
+      <source src="../videos/work-series.mp4" type="video/mp4">
+    </video>
+    <div class="section-inner">
+      <div class="section-bottom">
+        <div class="section-left">
+          <h2>Series</h2>
+          <p>A careful pic of topics is studied before choosing the next series to produce, integrating our proprietary methodology to achieve the most complete story possible.</p>
+          <p>Make the most hard to swallow topics, entertaining and awardable.</p>
+          <p>… is the Filmebra way.</p>
+        </div>
+        <div class="section-right">
+          OIA: Operación 21 (2021)<br>
+          Dir. Felix Bravo<br>
+          Lima - Peru<br><br>
+          ©Filmebra 2021
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHORTFILMS -->
+  <div class="section">
+    <video autoplay muted loop playsinline>
+      <source src="../videos/work-shortfilms.mp4" type="video/mp4">
+    </video>
+    <div class="section-inner">
+      <div class="section-bottom">
+        <div class="section-left">
+          <h2>Shortfilms</h2>
+          <p>As a producing house that is focused on fully researching every topic we managed, synthesis is key during our approach to filming short form.</p>
+          <p>Compelling human stories with strong foundation in the most compact argument.</p>
+          <p>… is the Filmebra way.</p>
+        </div>
+        <div class="section-right">
+          Aún Existen (2021)<br>
+          Dir. Felix Bravo<br>
+          Cusco - Peru<br><br>
+          ©Filmebra 2021
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FICTION -->
+  <div class="section">
+    <video autoplay muted loop playsinline>
+      <source src="../videos/work-fiction.mp4" type="video/mp4">
+    </video>
+    <div class="section-inner">
+      <div class="section-bottom">
+        <div class="section-left">
+          <h2>Fiction</h2>
+          <p>In an everchanging society with more complex dynamics every day, our approach to fiction is founded in reality, translating complex and sensitive topics in digestible formats cater to every public.</p>
+          <p>Reach is key, and through that journey we are closer to you in every award.</p>
+          <p>… is the Filmebra way.</p>
+        </div>
+        <div class="section-right">
+          Maiyu (in production)<br>
+          Dir. Felix Bravo<br>
+          Tumbes - Peru<br><br>
+          ©Filmebra 2025
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOCIAL PROJECTS -->
+  <div class="section">
+    <video autoplay muted loop playsinline>
+      <source src="../videos/work-social.mp4" type="video/mp4">
+    </video>
+    <div class="section-inner">
+      <div class="section-bottom">
+        <div class="section-left">
+          <h2>Social Projects</h2>
+          <p>Involvement in change is our core, so it is mathematically organic to be - not only part of - but the impulsors with funding and implementation of projects were the most vulnerable are in the center.</p>
+          <p>Communities building the story, with us being just the pen.</p>
+          <p>… is the Filmebra way.</p>
+        </div>
+        <div class="section-right">
+          Proyecto Social Norte<br>
+          Coordination: Felix Bravo<br>
+          Amazonas - Peru<br><br>
+          ©Filmebra 2022, ©Norte 2022
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    If you want to reach out, please do so here: info@filmebra.com and be sure to have a concise subject.<br>
+    We do not accept unsolicited work.<br>
+    This page was made for you by ©Filmebra 2026
+  </footer>
+
+</body>
+</html>
